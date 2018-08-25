@@ -2,7 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("#form");
   form.addEventListener('submit', handleFormSubmit);
 
-    renderList();
+  renderList();
+
+  const deleteButton = document.querySelector("#delete-form");
+  deleteButton.addEventListener('submit', handleDeleteSubmit);
 });
 
 const localSongs = function () {
@@ -18,6 +21,10 @@ const getList = function () {
     return [];
   }
 };
+
+const saveList = function (list) {
+  localStorage.setItem("songs", JSON.stringify(list))
+}
 
 const createLi = function (liItem, value) {
   const itemLi = document.createElement("li");
@@ -38,7 +45,7 @@ const handleFormSubmit = function (event) {
 
   rockSongList.push(song);
 
-  localStorage.setItem("songs", JSON.stringify(rockSongList));
+  saveList(rockSongList);
   renderList();
   event.target.reset();
 }
@@ -63,4 +70,10 @@ const renderList = function () {
     songUl = buildList(song);
     songDiv.appendChild(songUl);
   });
+}
+
+const handleDeleteSubmit = function (event) {
+  console.log("pressed");
+  saveList([]);
+  renderList();
 }
