@@ -21,6 +21,12 @@ document.addEventListener("DOMContentLoaded", () => {
 //
 const handleFormSubmit = function (event) {
   event.preventDefault();
+  const resultForm = document.querySelector("#song-list");
+  const songUl = document.createElement('ul');
+  const songTitleLi = document.createElement('li');
+  songTitleLi.textContent = `Song Title: ${event.target.song_title.value}`;
+  songUl.appendChild(songTitleLi);
+  resultForm.appendChild(songUl);
 //   rockSongList = [];
 //   const newSong = {
 //     song_title: event.target.song_title.value,
