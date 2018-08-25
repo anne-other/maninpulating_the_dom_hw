@@ -40,7 +40,8 @@ const handleFormSubmit = function (event) {
   song = {
     "Song Title": event.target.song_title.value,
     "Band Name": event.target.band_name.value,
-    "Genre": event.target.genre.value
+    "Genre": event.target.genre.value,
+    "Rating": event.target.rating.value
   };
 
   rockSongList.push(song);
