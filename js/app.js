@@ -15,8 +15,25 @@ const getList = function () {
     localSongs;
   }
   else {
-    return []
+    return [];
   }
+};
+
+const createLi = function (liItem, song) {
+  const(liItme)Li = document.createElement("li");
+  (liItem)Li.textContent = `${liItem}: ${song["liItem"]}`;
+
+  return (liItem)Li;
+}
+
+const buildList = function (song) {
+  const songUl = document.createElement("ul");
+  song.forEach((liItem) => {
+    liItem = createLi(liItem);
+    songUl.appendChild(liItem);
+    
+    return songUl
+  })
 }
 
 const renderList = function () {
