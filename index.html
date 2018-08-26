@@ -15,52 +15,60 @@
   <form id="form">
     <div id="form-wrapper">
       <div class="form-item">
-        <label for="song_title">Song Title:</label>
+        <div class="column">
+          <label for="song_title">Song Title:</label>
+        </div>
         <input type="text" id="song_title" required/>
       </div>
 
       <div class="form-item">
-        <label for="band_name" class="primary">Band Name:</label>
-        <input type="text" id="band_name" required/>
-      </div>
+        <div class="column">
+          <label for="band_name" class="primary">Band Name:</label>
+        </div>
+          <input type="text" id="band_name" required/>
+        </div>
 
-      <div class="form-item">
-        <label for="genre">Genre:</label>
-        <select id="genre">
-          <option value="" disabled selected>Select a genre</option>
-          <option value="Grunge">Grunge</option>
-          <option value="Heavy Metal">Heavy Metal</option>
-          <option value="Nu Metal">Nu Metal</option>
-          <option value="Punk">Punk</option>
-          <option value="Rock and Roll">Rock and Roll</option>
-        </select>
-      </div>
+        <div class="form-item">
+          <div class="column">
+            <label for="genre">Genre:</label>
+          </div>
+          <select id="genre">
+            <option value="" disabled selected>Select a genre</option>
+            <option value="Grunge">Grunge</option>
+            <option value="Heavy Metal">Heavy Metal</option>
+            <option value="Nu Metal">Nu Metal</option>
+            <option value="Punk">Punk</option>
+            <option value="Rock and Roll">Rock and Roll</option>
+          </select>
+        </div>
 
-      <div class="form-item">
-        <label for="rating">Rating:</label>
-        <input type="radio" name="rating" id="1" value="1">
-        <label for="1">1</label>
-        <input type="radio" name="rating" id="2" value="2">
-        <label for="2">2</label>
-        <input type="radio" name="rating" id="3" value="3">
-        <label for="3">3</label>
-        <input type="radio" name="rating" id="4" value="4">
-        <label for="4">4</label>
-        <input type="radio" name="rating" id="5" value="5">
-        <label for="5">5</label>
-      </div>
+        <div class="form-item">
+          <div class="column">
+            <label for="rating">Rating:</label>
+          </div>
+          <input type="radio" name="rating" id="1" value="1">
+          <label for="1">1</label>
+          <input type="radio" name="rating" id="2" value="2">
+          <label for="2">2</label>
+          <input type="radio" name="rating" id="3" value="3">
+          <label for="3">3</label>
+          <input type="radio" name="rating" id="4" value="4">
+          <label for="4">4</label>
+          <input type="radio" name="rating" id="5" value="5">
+          <label for="5">5</label>
+        </div>
 
+      </div>
+      <input type="submit" value="Save">
+    </form>
+
+    <h1>Rock Song List</h1>
+    <div id="song-list">
     </div>
-    <input type="submit" value="Save">
-  </form>
 
-  <h1>Rock Song List</h1>
-  <div id="song-list">
-  </div>
-
-  <form id="delete-form">
+    <form id="delete-form">
       <input class="delete" type="submit" value="delete All"/>
-  </form>
+    </form>
 
-</body>
-</html>
+  </body>
+  </html>

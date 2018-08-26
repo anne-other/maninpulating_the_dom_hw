@@ -56,6 +56,7 @@ input[type=submit] {
   font-size: 20pt;
   width: 5em;
   height: 1.5em;
+  margin-top: 10px;
 }
 
 input[type=submit]:active {
@@ -78,6 +79,10 @@ div.form-wrapper {
 div.form-item {
   display: flex;
   flex: 1;
+}
+
+div.column {
+  width: 15%;
 }
 
 #song-list{
